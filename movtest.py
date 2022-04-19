@@ -111,7 +111,7 @@ class MoveAppTest():
         for el in driver.find_elements(By.CSS_SELECTOR, 'a'):
             l = el.get_attribute('href').split('#')[0]
             if l is None:
-                print(el)
+                print(el.get_attribute('name'))
                 continue
             if (l[-4:] == '.pdf') or (l[-4:] == '.txt'):
                 if (l not in self.files):
